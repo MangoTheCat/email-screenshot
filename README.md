@@ -4,6 +4,8 @@ chron job to take a screenshot of a specific webpage and then email it to someon
 Currently set to email a public trello board to paulin.shek@gmail.com, for example only.
 
 ## Dependencies
+phantomjs
+
 mailx 
 
 postfix needs to be correctly configured for this to work.
