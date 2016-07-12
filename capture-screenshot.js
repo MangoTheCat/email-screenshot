@@ -1,10 +1,9 @@
+var system = require('system');
 var page = require('webpage').create();
 
-var myUrl = 'http://www.google.com';
-
-page.open(myUrl, function(){
+page.open(system.args[1], function(){
 	setTimeout(function(){
-		page.render('screenshot.png');
+		page.render(system.args[2]);
 		phantom.exit();
 	}, 10000);
 })

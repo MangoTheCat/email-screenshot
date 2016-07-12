@@ -1,5 +1,1 @@
-1 0 * * Monday ./capture-screenshot.sh
-1 0 * * Tuesday ./capture-screenshot.sh
-1 0 * * Wednesday ./capture-screenshot.sh
-1 0 * * Thursday ./capture-screenshot.sh
-1 0 * * Friday ./capture-screenshot.sh
+1 0 * * 1-5 ./capture-screenshot.sh http://www.google.com paulin.shek@gmail.com
