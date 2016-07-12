@@ -1,11 +1,23 @@
 # email-screenshot
-cron job to take a screenshot of a specific webpage and then email it to someone, at 00:01 on weekdays.
+Shell script which takes a screenshot of a specific webpage and then emails it to someone.
 
-Currently set to email a screenshot of google homepage to myName@example.com, for example only.
+Can be used in /etc/crontab to schedule the emailing of screenshots. 
+For examples of how to do this, see the crontab file in this repo.
 
 ## Dependencies
-phantomjs
 
-mailx 
+* phantomjs
+* mailx 
+* postfix (needs to be correctly configured)
 
-postfix needs to be correctly configured for this to work.
+## Installation and Usage
+
+```
+git clone https://github.com/MangoTheCat/email-screenshot.git
+
+cd email-screenshot
+
+./capture-screenshot.sh <webpage url> <email address>
+```
+
+
