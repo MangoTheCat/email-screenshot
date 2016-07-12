@@ -10,14 +10,22 @@ For examples of how to do this, see the crontab file in this repo.
 * mailx 
 * postfix (needs to be correctly configured)
 
-## Installation and Usage
+## Installation
 
 ```
 git clone https://github.com/MangoTheCat/email-screenshot.git
 
 cd email-screenshot
 
+chmod a+x capture-screenshot.sh
+```
+
+## Usage
+
+```
 ./capture-screenshot.sh <webpage url> <email address>
 ```
+
+
 
 
