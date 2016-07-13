@@ -1,2 +1,2 @@
-1 0 * * 1-5 ./capture-screenshot.sh http://www.google.com paulin.shek@gmail.com
-1 0 * * 1-5 ./capture-screenshot.sh http://www.bbc.co.uk/news paulin.shek@gmail.com
+1 0 * * 1-5 root ./capture-screenshot.sh http://www.google.com paulin.shek@gmail.com
+1 0 * * 1-5 root ./capture-screenshot.sh http://www.bbc.co.uk/news paulin.shek@gmail.com
