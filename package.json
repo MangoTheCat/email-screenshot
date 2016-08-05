@@ -1,0 +1,22 @@
+{
+  "name": "email-screenshot",
+  "version": "0.0.0",
+  "description": "Tool to email screenshots of websites to people",
+  "main": "capture-screenshot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MangoTheCat/email-screenshot.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MangoTheCat/email-screenshot/issues"
+  },
+  "dependencies": {
+    "phantomjs": "~2.1.7",
+    "nodemailer": "~2.5.0"
+  }
+}
