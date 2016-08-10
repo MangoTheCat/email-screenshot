@@ -8,7 +8,7 @@ var cli  = meow(`
     Usage
       $ email-screenshot <urls> <email-addresses>
 
-    Parameters starting with http:// or http:// are treated as URLs,
+    Parameters starting with http:// or https:// are treated as URLs,
     others are treated as email addresses. The order of URLs and
     email addresses is ignored.
 
