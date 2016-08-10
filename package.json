@@ -18,16 +18,13 @@
   "bin": {
     "email-screenshot": "cli.js"
   },
-  "engines": {
-    "node": ">=4"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MangoTheCat/email-screenshot/issues"
   },
   "homepage": "https://github.com/MangoTheCat/email-screenshot#readme",
   "dependencies": {
-    "meow": "^3.7.0",
+    "meow": "^3.6.0",
     "nodemailer": "^2.5.0",
     "tmp": "0.0.28",
     "webshot": "^0.18.0"
