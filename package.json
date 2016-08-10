@@ -21,7 +21,7 @@
   "engines": {
     "node": ">=4"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MangoTheCat/email-screenshot/issues"
   },
