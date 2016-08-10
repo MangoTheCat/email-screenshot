@@ -1,3 +1,8 @@
-# One minute after midnight, every workday
-40 13 * * 1-5 email-screenshot http://www.google.com https://acme.com bugs.bunny@acme.com
-40 13 * * 1-5 email-screenshot http://www.bbc.co.uk/news bugs.bunny@acme.com daffy.duck@acme.com
+
+# Probably need to set up PATH, to include the location of `email-screenshot`
+
+PATH=/usr/local/bin/:$PATH
+
+# One-two minutes after midnight, every workday
+1 0 * * 1-5 email-screenshot http://www.google.com https://acme.com bugs.bunny@acme.com --from me@acme.com
+2 0 * * 1-5 email-screenshot http://www.bbc.co.uk/news bugs.bunny@acme.com daffy.duck@acme.com --from me@acme.com
