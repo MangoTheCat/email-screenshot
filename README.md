@@ -11,7 +11,9 @@ specified email addresses.
 ## Installation
 
 ```
-npm install --global email-screenshot
+git clone https://github.com/MangoTheCat/email-screenshot.git
+cd email-screenshot
+npm install --global .
 ```
 
 ## Usage
