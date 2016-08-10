@@ -2,29 +2,31 @@
 'use strict';
 
 var meow = require('meow');
-var esc  = require('.');
+var esc  = require('./');
 
-var cli  = meow(`
-    Usage
-      $ email-screenshot <urls> <email-addresses>
-
-    Parameters starting with http:// or https:// are treated as URLs,
-    others are treated as email addresses. The order of URLs and
-    email addresses is ignored.
-
-    Options
-      --help      Show this help message.
-      --host      Mail server host name [localhost].
-      --port      Mail server port [25].
-      --secure    Whether mail server requires SSL [false].
-      --user      Username for mail server authentication [none].
-      --pass      Password for mail server authentication [none].
-      --from      The sender of the email [none].
-      --subject   Mail subject [Dashboard screenshot].
-
-    Examples
-      $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me
-`);
+var cli  = meow({
+    help: [
+	'Usage',
+	'  $ email-screenshot <urls> <email-addresses>',
+	'',
+	'Parameters starting with http:// or https:// are treated as URLs,',
+	'others are treated as email addresses. The order of URLs and',
+	'email addresses is ignored.',
+	'',
+	'Options',
+	'  --help      Show this help message.',
+	'  --host      Mail server host name [localhost].',
+	'  --port      Mail server port [25].',
+	'  --secure    Whether mail server requires SSL [false].',
+	'  --user      Username for mail server authentication [none].',
+	'  --pass      Password for mail server authentication [none].',
+	'  --from      The sender of the email [none].',
+	'  --subject   Mail subject [Dashboard screenshot].',
+	'',
+	'Examples',
+	'  $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me'
+    ]
+});
 
 var options = { };
 
