@@ -2,6 +2,7 @@
 var webshot = require('webshot');
 var nodemailer = require('nodemailer');
 var tmp = require('tmp');
+var path = require('path');
 
 function email_screenshot(urls, emails, options) {
 
