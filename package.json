@@ -1,22 +1,35 @@
 {
   "name": "email-screenshot",
-  "version": "0.0.0",
-  "description": "Tool to email screenshots of websites to people",
-  "main": "capture-screenshot.js",
+  "version": "1.0.0",
+  "description": "Take a screenshot of a web page and send it in email.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MangoTheCat/email-screenshot.git"
+  "repository": "MangoTheCat/email-screenshot",
+  "keywords": [
+    "screenshot",
+    "email"
+  ],
+  "author": {
+    "name": "Gábor Csárdi",
+    "email": "gcsardi@mango-solutions.com"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
+  "bin": {
+    "email-screenshot": "cli.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MangoTheCat/email-screenshot/issues"
   },
+  "homepage": "https://github.com/MangoTheCat/email-screenshot#readme",
   "dependencies": {
-    "phantomjs": "~2.1.7",
-    "nodemailer": "~2.5.0"
+    "meow": "^3.7.0",
+    "nodemailer": "^2.5.0",
+    "tmp": "0.0.28",
+    "webshot": "^0.18.0"
   }
 }
