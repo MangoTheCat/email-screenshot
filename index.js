@@ -32,6 +32,9 @@ function email_screenshot(urls, emails, options) {
 			    'pass': process.env.EMAIL_SCREENSHOT_PASS };
     }
 
+    // webshot wants this in ms
+    var delay = options.delay * 1000 || 30 * 1000;
+
     var transporter = nodemailer.createTransport(smtpConfig);
 
     var mailOptions = {
@@ -49,7 +52,12 @@ function email_screenshot(urls, emails, options) {
 	    postfix: '.png'
 	});
 
-	webshot(url, tmpName, { shotSize: "all" }, function(err) {
+	var webshot_options = {
+	    shotSize: "all",
+	    renderDelay: delay
+	};
+
+	webshot(url, tmpName, webshot_options, function(err) {
 
 	    if (err) {
 		console.log('Cannot capture ' + url + '\n');

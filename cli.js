@@ -22,15 +22,18 @@ var cli  = meow({
 	'  --pass      Password for mail server authentication [none].',
 	'  --from      The sender of the email [none].',
 	'  --subject   Mail subject [Dashboard screenshot].',
+	'  --delay     Delay to make sure that the page loads, in seconds [30].',
 	'',
 	'Examples',
-	'  $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me'
+        '  $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me',
+	'  $ email-screenshot --delay 120 https://cnn.com x@ac.me'
     ]
 });
 
 var options = { };
 
-['host', 'port', 'secure', 'user', 'pass', 'from', 'subject'].forEach(
+['host', 'port', 'secure', 'user', 'pass', 'from', 'subject',
+ 'delay'].forEach(
     function(x) {
 	options[x] = cli.flags[x];
 	delete cli.flags[x];
