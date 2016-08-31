@@ -21,6 +21,7 @@ function email_screenshot(urls, emails, options) {
     }
     if (smtpConfig.secure === undefined) {
 	smtpConfig.secure = false;
+	smtpConfig.ignoreTLS = true;
     }
 
     smtpConfig.auth = options.auth;
