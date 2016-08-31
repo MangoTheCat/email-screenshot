@@ -23,17 +23,19 @@ var cli  = meow({
 	'  --from      The sender of the email [none].',
 	'  --subject   Mail subject [Dashboard screenshot].',
 	'  --delay     Delay to make sure that the page loads, in seconds [30].',
+	'  --header    Extra text to include in the email [none].',
 	'',
 	'Examples',
         '  $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me',
-	'  $ email-screenshot --delay 120 https://cnn.com x@ac.me'
+	'  $ email-screenshot --delay 120 https://cnn.com x@ac.me',
+	'  $ email-screenshot --header \'Look at this:\' http://att.com x@ac.me'
     ]
 });
 
 var options = { };
 
 ['host', 'port', 'secure', 'user', 'pass', 'from', 'subject',
- 'delay'].forEach(
+ 'delay', 'header'].forEach(
     function(x) {
 	options[x] = cli.flags[x];
 	delete cli.flags[x];

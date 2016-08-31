@@ -34,6 +34,7 @@ function email_screenshot(urls, emails, options) {
 
     // webshot wants this in ms
     var delay = options.delay * 1000 || 30 * 1000;
+    var header = options.header || '';
 
     var transporter = nodemailer.createTransport(smtpConfig);
 
@@ -42,7 +43,7 @@ function email_screenshot(urls, emails, options) {
 	to: emails.join(', '),
 	subject: options.subject || process.env.EMAIL_SCREENSHOT_SUBJECT ||
 	    'Dashboard screenshot',
-	html: '<img src="cid:screenshot">'
+	html: '<p>' + header + '</p><img src="cid:screenshot">'
     };
 
     urls.forEach(function(url) {
