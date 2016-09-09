@@ -37,7 +37,7 @@ var cli  = meow({
 var options = { };
 
 ['host', 'port', 'secure', 'user', 'pass', 'from', 'subject',
- 'delay', 'header'].forEach(
+ 'delay', 'header', 'width', 'height'].forEach(
     function(x) {
 	options[x] = cli.flags[x];
 	delete cli.flags[x];
