@@ -1,6 +1,6 @@
 {
   "name": "email-screenshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Take a screenshot of a web page and send it in email.",
   "main": "index.js",
   "scripts": {
