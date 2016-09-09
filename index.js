@@ -35,6 +35,8 @@ function email_screenshot(urls, emails, options) {
     // webshot wants this in ms
     var delay = options.delay * 1000 || 30 * 1000;
     var header = options.header || '';
+    var windowWidth = options.width || 1800;
+    var windowHeight = options.height || 1200;
 
     var transporter = nodemailer.createTransport(smtpConfig);
 
@@ -55,7 +57,8 @@ function email_screenshot(urls, emails, options) {
 
 	var webshot_options = {
 	    shotSize: "all",
-	    renderDelay: delay
+	    renderDelay: delay,
+	    windowSize: { width: windowWidth, height: windowHeight }
 	};
 
 	webshot(url, tmpName, webshot_options, function(err) {

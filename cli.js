@@ -24,6 +24,8 @@ var cli  = meow({
 	'  --subject   Mail subject [Dashboard screenshot].',
 	'  --delay     Delay to make sure that the page loads, in seconds [30].',
 	'  --header    Extra text to include in the email [none].',
+	'  --width     Browser window width in pixels [1800].',
+	'  --height    Browser window height in pixels [1200].',
 	'',
 	'Examples',
         '  $ email-screenshot https://cnn.com http://att.com x@ac.me y@ac.me',
